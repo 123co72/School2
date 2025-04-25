@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 30px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #004080;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Our School Library</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Our Mission</h2>
+            <p>We provide a space for students and faculty to explore books, research materials, and engage in a community of learners.</p>
+        </section>
+
+        <section>
+            <h2>Our Vision</h2>
+            <p>To foster a culture of reading, learning, and innovation, where students and faculty collaborate and grow through knowledge and shared resources.</p>
+        </section>
+
+        <section>
+            <h2>Our Goals</h2>
+            <ul>
+                <li>To provide access to a wide range of educational materials.</li>
+                <li>To support academic and personal growth through reading.</li>
+                <li>To create a welcoming and inspiring environment for all members of the school community.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Statement Policy</h2>
+            <p>We are committed to maintaining a library that is inclusive, diverse, and welcoming to all students, staff, and faculty members. We uphold the highest standards of confidentiality and respect for intellectual property rights in all of our services.</p>
+        </section>
+
+        <section class="slideshow-container">
+            <h2>Our Library in Pictures</h2>
+            <div class="mySlides fade">
+                <img src="https://example.com/image1.jpg" alt="Library Image 1">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://example.com/image2.jpg" alt="Library Image 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://example.com/image3.jpg" alt="Library Image 3">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 School Library</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+
+        showSlides();
+    </script>
+</body>
+</html>
